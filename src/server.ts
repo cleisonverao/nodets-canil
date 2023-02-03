@@ -25,7 +25,8 @@ server.use(mainRouter);
 
 //configuração da pagina 404 pagina não encontrada
 server.use((req:Request, res:Response)=>{
-    res.status(404).send('not found page');
+    res.render('pages/404');
+    //res.status(404).send('not found page');
 });
 //aqui esta startando o servidor na porta 3000 no localhost
 const porta = process.env.PORT;
